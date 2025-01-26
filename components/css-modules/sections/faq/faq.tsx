@@ -4,17 +4,7 @@ import React, { useState } from 'react';
 import styles from './faq.module.css';
 import { Heading, Text } from '../../elements/typography/typography';
 import { Section } from '../../elements/section/section';
-
-interface FAQItem {
-  question: string;
-  answer: string;
-}
-
-interface FAQSectionProps {
-  title: string;
-  subtitle?: string;
-  items: FAQItem[];
-}
+import { FAQItem, FAQSectionProps } from './faq.types';
 
 const FAQAccordionItem: React.FC<FAQItem & { isOpen: boolean; onClick: () => void }> = ({
   question,
@@ -33,11 +23,11 @@ const FAQAccordionItem: React.FC<FAQItem & { isOpen: boolean; onClick: () => voi
   </div>
 );
 
-export const FAQSection: React.FC<FAQSectionProps> = ({ title, subtitle, items }) => {
+export const FAQSection: React.FC<FAQSectionProps> = ({ title, subtitle, items, background = 'white' }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <Section background="white" padding="large" data-full-bleed>
+    <Section background={background} padding="large" data-full-bleed>
       <div className={styles.faq_container}>
         <div className={styles.faq_header}>
           <Heading level="h2" className={styles.faq_title}>

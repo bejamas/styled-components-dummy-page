@@ -1,0 +1,119 @@
+.testimonials {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--section-padding-x);
+}
+
+.testimonials_header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto var(--space-16);
+}
+
+.testimonials_title {
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-4);
+}
+
+.testimonials_subtitle {
+  color: var(--color-gray-600);
+}
+
+.testimonials_container {
+  display: grid;
+  gap: var(--space-8);
+}
+
+.testimonials_container[data-variant="grid"] {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.testimonials_container[data-variant="masonry"] {
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: masonry;
+}
+
+.testimonial_card {
+  background: var(--color-background);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  transition: all 0.3s ease;
+}
+
+.testimonial_card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.08);
+}
+
+.testimonial_card[data-variant="masonry"] {
+  break-inside: avoid;
+}
+
+.rating {
+  display: flex;
+  gap: var(--space-1);
+}
+
+.star {
+  width: 20px;
+  height: 20px;
+  color: var(--color-gray-300);
+}
+
+.star[data-filled="true"] {
+  color: #fbbf24;
+}
+
+.testimonial_quote {
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--color-gray-700);
+}
+
+.testimonial_author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.author_avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author_info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.author_name {
+  color: var(--color-foreground);
+}
+
+.author_title {
+  color: var(--color-gray-600);
+}
+
+@media (max-width: 1024px) {
+  .testimonials_container[data-variant="grid"],
+  .testimonials_container[data-variant="masonry"] {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .testimonials_container[data-variant="grid"],
+  .testimonials_container[data-variant="masonry"] {
+    grid-template-columns: 1fr;
+  }
+} 
