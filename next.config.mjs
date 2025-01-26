@@ -1,3 +1,5 @@
+import withBundleAnalyzer from '@next/bundle-analyzer';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
@@ -10,5 +12,10 @@ const nextConfig = {
       ],
     },
   };
+
+const bundleAnalyzer = withBundleAnalyzer({
+    enabled: process.env.ANALYZE === 'true',
+  });
   
-module.exports = nextConfig;
+  export default bundleAnalyzer(nextConfig);
+  

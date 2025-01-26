@@ -21,6 +21,37 @@ export default function Home() {
         subtitle="Experience the difference with our modern, performant components"
         ctaText="Get Started"
       />
+      <TextImage
+        title="Transform Your Development"
+        description="Build beautiful, responsive interfaces with our modern component library. Designed for developers who value clean code and exceptional user experiences."
+        image={{
+          src: 'https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg',
+          alt: 'Team collaborating on code',
+        }}
+        ctaText="Learn More"
+        ctaHref="/about"
+      />
+      <FeaturesGrid
+        title="Why Choose Us"
+        subtitle="Discover the benefits of using our component library"
+        features={[
+          {
+            icon: '/icons/speed.svg',
+            title: 'Lightning Fast',
+            description: 'Optimized for maximum performance and minimal bundle size',
+          },
+          {
+            icon: '/icons/flexible.svg',
+            title: 'Highly Flexible',
+            description: 'Customizable components that adapt to your needs',
+          },
+          {
+            icon: '/icons/typescript.svg',
+            title: 'Type Safe',
+            description: 'Built with TypeScript for better developer experience',
+          },
+        ]}
+      />
       <Partners
         title="Trusted By Industry Leaders"
         subtitle="Companies using our platform"
@@ -57,37 +88,6 @@ export default function Home() {
             href: '#',
           },
         ]}
-      />
-      <FeaturesGrid
-        title="Why Choose Us"
-        subtitle="Discover the benefits of using our component library"
-        features={[
-          {
-            icon: '/icons/speed.svg',
-            title: 'Lightning Fast',
-            description: 'Optimized for maximum performance and minimal bundle size',
-          },
-          {
-            icon: '/icons/flexible.svg',
-            title: 'Highly Flexible',
-            description: 'Customizable components that adapt to your needs',
-          },
-          {
-            icon: '/icons/typescript.svg',
-            title: 'Type Safe',
-            description: 'Built with TypeScript for better developer experience',
-          },
-        ]}
-      />
-      <TextImage
-        title="Transform Your Development"
-        description="Build beautiful, responsive interfaces with our modern component library. Designed for developers who value clean code and exceptional user experiences."
-        image={{
-          src: 'https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg',
-          alt: 'Team collaborating on code',
-        }}
-        ctaText="Learn More"
-        ctaHref="/about"
       />
       <TextImage
         title="Built for Scale"
