@@ -1,17 +1,17 @@
-import { Container } from '../components/styled/elements/container';
+import { Container } from '../components/styled/elements/container/container';
 import { Hero } from '../components/styled/sections/hero/hero';
-import { FeaturesGrid } from '../components/css-modules/sections/features/features';
-import { FAQSection } from '../components/css-modules/sections/faq/faq';
-import { TextImage } from '@/components/css-modules/sections/text-image/text-image';
-import { ShowcaseGrid } from '../components/css-modules/sections/showcase/showcase';
-import { Process } from '../components/css-modules/sections/process/process';
-import { ContactForm } from '@/components/css-modules/sections/contact/contact';
-import { Pricing } from '@/components/css-modules/sections/pricing/pricing';
-import { Testimonials } from '@/components/css-modules/sections/testimonials/testimonials';
-import { Stats } from '@/components/css-modules/sections/stats/stats';
-import { Partners } from '@/components/css-modules/sections/partners/partners';
-import { BlogGrid } from '@/components/css-modules/sections/blog/blog';
-import { Tabs } from '@/components/css-modules/sections/tabs/tabs';
+import { FeaturesGrid } from '../components/styled/sections/features/features';
+import { FAQSection } from '../components/styled/sections/faq/faq';
+import { TextImage } from '../components/styled/sections/text-image/text-image';
+import { ShowcaseGrid } from '../components/styled/sections/showcase/showcase';
+import { Process } from '../components/styled/sections/process/process';
+import { ContactForm } from '../components/styled/sections/contact/contact';
+import { Pricing } from '@/components/styled/sections/pricing/pricing';
+import { Testimonials } from '@/components/styled/sections/testimonials/testimonials';
+import { Stats } from '@/components/styled/sections/stats/stats';
+import { Partners } from '@/components/styled/sections/partners/partners';
+import { BlogGrid } from '@/components/styled/sections/blog/blog';
+import { Tabs } from '@/components/styled/sections/tabs/tabs';
 
 export default function Home() {
   return (

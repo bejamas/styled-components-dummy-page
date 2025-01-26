@@ -8,6 +8,8 @@ declare module 'styled-components' {
       accentDark: string
       background: string
       foreground: string
+      error: string
+      success: string
       gray: {
         100: string
         200: string
@@ -48,7 +50,7 @@ declare module 'styled-components' {
       20: string
       24: string
     }
-    radii: {
+    radius: {
       sm: string
       md: string
       lg: string
@@ -70,6 +72,8 @@ export const theme: DefaultTheme = {
     accentDark: '#95c951',
     background: '#ffffff',
     foreground: '#000000',
+    error: '#ef4444',
+    success: '#10b981',
     gray: {
       100: '#f8f9fa',
       200: '#e9ecef',
@@ -110,7 +114,7 @@ export const theme: DefaultTheme = {
     20: '80px',
     24: '96px',
   },
-  radii: {
+  radius: {
     sm: '4px',
     md: '8px',
     lg: '12px',
@@ -122,4 +126,4 @@ export const theme: DefaultTheme = {
     paddingY: '96px', // space.24
     paddingX: '24px', // space.6
   },
-} 
+};

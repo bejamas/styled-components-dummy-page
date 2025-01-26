@@ -1,12 +1,12 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import Provider from '../styles/provider';
-import { Navigation } from '../components/css-modules/sections/navigation/navigation';
-import { Footer } from '../components/css-modules/sections/footer/footer';
+import { Navigation } from '../components/styled/sections/navigation/navigation';
+import { Footer } from '../components/styled/sections/footer/footer';
 
 export const metadata: Metadata = {
-  title: 'CSS Modules Marketing',
-  description: 'Performance testing with CSS Modules',
+  title: 'Styled Components Marketing',
+  description: 'Performance testing with Styled Components',
 };
 
 const navigationLinks = [

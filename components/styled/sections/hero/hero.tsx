@@ -1,9 +1,9 @@
 'use client';
 
 import styled, { keyframes } from 'styled-components';
-import { Container } from '../../elements/container';
-import { Button } from '../../elements/button';
-import { Heading, Text } from '../../elements/typography';
+import { Container } from '../../elements/container/container';
+import { Button } from '../../elements/button/button';
+import { Heading, Text } from '../../elements/typography/typography';
 
 interface HeroProps extends React.HTMLAttributes<HTMLElement> {
   title: string;
