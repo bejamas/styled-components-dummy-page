@@ -5,6 +5,7 @@ import { FAQSection } from '../components/css-modules/sections/faq/faq';
 import { TextImage } from '@/components/css-modules/sections/text-image/text-image';
 import { ShowcaseGrid } from '../components/css-modules/sections/showcase/showcase';
 import { Process } from '../components/css-modules/sections/process/process';
+import { ContactForm } from '@/components/css-modules/sections/contact/contact';
 
 export default function Home() {
   return (
@@ -148,6 +149,11 @@ export default function Home() {
             answer: 'You can start by exploring our components and see how they can be used in your project.',
           },
         ]}
+      />
+      <ContactForm
+        title="Contact Us"
+        subtitle="We'd love to hear from you! Use the form below to get in touch with us."
+        background="white"
       />
     </Container>
   );
