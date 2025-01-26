@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import '../styles/globals.css';
+import Provider from '../styles/provider';
 import { Navigation } from '../components/css-modules/sections/navigation/navigation';
 import { Footer } from '../components/css-modules/sections/footer/footer';
 
@@ -53,9 +53,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
-        <Navigation links={navigationLinks} ctaText="Get Started" ctaHref="/signup" />
-        <main>{children}</main>
-        <Footer columns={footerColumns} bottomLinks={bottomLinks} />
+        <Provider>
+          <Navigation links={navigationLinks} ctaText="Get Started" ctaHref="/signup" />
+          <main>{children}</main>
+          <Footer columns={footerColumns} bottomLinks={bottomLinks} />
+        </Provider>
       </body>
     </html>
   );

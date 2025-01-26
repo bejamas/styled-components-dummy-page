@@ -11,6 +11,9 @@ const nextConfig = {
         },
       ],
     },
+    compiler: {
+      styledComponents: true,
+    },
   };
 
 const bundleAnalyzer = withBundleAnalyzer({

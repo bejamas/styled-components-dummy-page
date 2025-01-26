@@ -1,5 +1,5 @@
-import { Container } from '../components/css-modules/elements/container/container';
-import { Hero } from '../components/css-modules/sections/hero/hero';
+import { Container } from '../components/styled/elements/container';
+import { Hero } from '../components/styled/sections/hero/hero';
 import { FeaturesGrid } from '../components/css-modules/sections/features/features';
 import { FAQSection } from '../components/css-modules/sections/faq/faq';
 import { TextImage } from '@/components/css-modules/sections/text-image/text-image';
@@ -15,7 +15,7 @@ import { Tabs } from '@/components/css-modules/sections/tabs/tabs';
 
 export default function Home() {
   return (
-    <Container data-full-width>
+    <Container isFullWidth>
       <Hero
         title="Welcome to Our Platform"
         subtitle="Experience the difference with our modern, performant components"
