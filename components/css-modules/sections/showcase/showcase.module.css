@@ -1,0 +1,176 @@
+.showcase {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--section-padding-x);
+}
+
+.showcase_header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto var(--space-16);
+}
+
+.showcase_section_subtitle {
+  margin-top: var(--space-4);
+  color: var(--color-gray-600);
+}
+
+.showcase_grid {
+  display: grid;
+  gap: var(--space-8);
+}
+
+.showcase_grid[data-columns="2"] {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.showcase_grid[data-columns="3"] {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.showcase_grid[data-columns="4"] {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.showcase_card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--color-background);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card Variants */
+.showcase_card[data-variant="default"] {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+.showcase_card[data-variant="gradient"] .showcase_overlay {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.2)
+  );
+}
+
+.showcase_card[data-variant="outlined"] {
+  border: 1px solid var(--color-gray-200);
+}
+
+.showcase_card[data-variant="minimal"] .showcase_content {
+  padding: var(--space-4);
+}
+
+/* Card Sizes */
+.showcase_card[data-size="sm"] {
+  --card-height: 320px;
+}
+
+.showcase_card[data-size="md"] {
+  --card-height: 400px;
+}
+
+.showcase_card[data-size="lg"] {
+  --card-height: 480px;
+}
+
+.showcase_media {
+  position: relative;
+  height: var(--card-height);
+}
+
+.showcase_image_wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.showcase_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.showcase_overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  transition: opacity 0.3s ease;
+}
+
+.showcase_badge {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-accent);
+  color: var(--color-foreground);
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: var(--radius-full);
+  z-index: 1;
+}
+
+.showcase_badge[data-badge-color="#0070f3"] {
+  background: #0070f3;
+  color: white;
+}
+
+/* Add more badge color variants as needed */
+.showcase_badge[data-badge-color="#befc65"] {
+  background: var(--color-accent);
+  color: var(--color-foreground);
+}
+
+.showcase_content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-6);
+  color: white;
+  z-index: 1;
+}
+
+.showcase_title {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-2);
+}
+
+.showcase_description {
+  opacity: 0.9;
+}
+
+.showcase_link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.showcase_link:hover .showcase_card {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.12);
+}
+
+.showcase_link:hover .showcase_image {
+  transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+  .showcase_grid[data-columns="4"] {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .showcase_grid[data-columns="3"],
+  .showcase_grid[data-columns="4"] {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .showcase_grid {
+    grid-template-columns: 1fr !important;
+  }
+} 
